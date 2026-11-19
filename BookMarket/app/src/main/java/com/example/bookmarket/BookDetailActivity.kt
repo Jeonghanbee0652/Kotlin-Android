@@ -1,12 +1,15 @@
 package com.example.bookmarket
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class BookDetailActivity : AppCompatActivity() {
@@ -36,6 +39,24 @@ class BookDetailActivity : AppCompatActivity() {
                     "설  명 :\n${book.description}"
 
         Toast.makeText(this, "${book.title} 상세 정보입니다", Toast.LENGTH_SHORT).show()
+
+        // 장바구니 담기 -> 확인 대화상자
+        findViewById<Button>(R.id.btnAddCart).setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("🛒 장바구니 담기")
+                .setMessage("${book.title}\n도서를 장바구니에 추가하시겠습니까?")
+                .setNegativeButton("아니요", null)
+                .setPositiveButton("예") { _, _ ->
+                    Cart.add(book)
+                    Toast.makeText(this, "장바구니에 담았습니다", Toast.LENGTH_SHORT).show()
+                }
+                .show()
+        }
+
+        // 장바구니 보기 -> 장바구니 화면
+        findViewById<Button>(R.id.btnViewCart).setOnClickListener {
+            startActivity(Intent(this, CartActivity::class.java))
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
