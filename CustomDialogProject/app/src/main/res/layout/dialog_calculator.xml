@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 사용자 정의 대화상자 : 계산기 화면 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_calc"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:text="계산기"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- 계산 결과 표시창 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#FFB9D99A"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvExpr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:minHeight="24dp"
+            android:textColor="#FF33402A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textColor="#FF1C2616"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/CalcButton.Op"
+            android:tag="AC"
+            android:text="AC" />
+
+        <Button
+            style="@style/CalcButton.Op"
+            android:tag="C"
+            android:text="C" />
+
+        <Button
+            style="@style/CalcButton.Op"
+            android:tag="*"
+            android:text="×" />
+
+        <Button
+            style="@style/CalcButton.Op"
+            android:tag="/"
+            android:text="÷" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/CalcButton"
+            android:tag="7"
+            android:text="7" />
+
+        <Button
+            style="@style/CalcButton"
+            android:tag="8"
+            android:text="8" />
+
+        <Button
+            style="@style/CalcButton"
+            android:tag="9"
+            android:text="9" />
+
+        <Button
+            style="@style/CalcButton.Op"
+            android:tag="-"
+            android:text="−" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/CalcButton"
+            android:tag="4"
+            android:text="4" />
+
+        <Button
+            style="@style/CalcButton"
+            android:tag="5"
+            android:text="5" />
+
+        <Button
+            style="@style/CalcButton"
+            android:tag="6"
+            android:text="6" />
+
+        <Button
+            style="@style/CalcButton.Op"
+            android:tag="+"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- 마지막 두 줄 : 왼쪽 3칸짜리 버튼 2줄 + 오른쪽 세로로 긴 = 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/CalcButton"
+                    android:tag="1"
+                    android:text="1" />
+
+                <Button
+                    style="@style/CalcButton"
+                    android:tag="2"
+                    android:text="2" />
+
+                <Button
+                    style="@style/CalcButton"
+                    android:tag="3"
+                    android:text="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/CalcButton.Op"
+                    android:tag="back"
+                    android:text="←" />
+
+                <Button
+                    style="@style/CalcButton"
+                    android:tag="0"
+                    android:text="0" />
+
+                <Button
+                    style="@style/CalcButton"
+                    android:tag="."
+                    android:text="." />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            style="@style/CalcButton"
+            android:layout_height="match_parent"
+            android:tag="="
+            android:text="="
+            android:textColor="#FFFFFFFF"
+            app:backgroundTint="#FFEE6A1E" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="닫기"
+        app:backgroundTint="#FFE8507A" />
+</LinearLayout>
