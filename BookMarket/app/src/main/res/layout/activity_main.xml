@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!-- 위쪽 그림 (책장) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:text="📚📕📗📘⏳\n🪴📙📒🐈"
+        android:textSize="46sp" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="도서 쇼핑몰에 오신 걸 환영합니다!"
+        android:textColor="#555555"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="12dp"
+        android:text="시작하기"
+        android:textSize="20sp"
+        app:backgroundTint="@color/teal" />
+
+    <!-- 아래쪽 그림 (책 읽는 사람) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:text="📖🧑‍🎓📚\n🐈‍⬛📚📚"
+        android:textSize="46sp" />
+</LinearLayout>
