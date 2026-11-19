@@ -45,13 +45,17 @@ class MenuActivity : AppCompatActivity() {
             startActivity(Intent(this, BookListActivity::class.java))
         }
 
+        // 메모장 -> 메모장 화면으로 이동
+        findViewById<TextView>(R.id.tileMemo).setOnClickListener {
+            startActivity(Intent(this, MemoActivity::class.java))
+        }
+
         // 나머지 메뉴는 토스트만 출력
         val others = mapOf(
             R.id.tileEbook to "E-Book",
             R.id.tileCustomer to "고객센터",
             R.id.tileMyPage to "나의페이지",
-            R.id.tileMarket to "마켓정보",
-            R.id.tileMemo to "메모장"
+            R.id.tileMarket to "마켓정보"
         )
         for ((id, name) in others) {
             findViewById<TextView>(id).setOnClickListener {
