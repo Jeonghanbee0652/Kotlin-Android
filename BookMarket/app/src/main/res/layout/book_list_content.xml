@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 도서목록 화면의 본문 (배너 + BookList 제목 + 도서 목록이 들어갈 자리) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="#FFFFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="#FFF3C6CF"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="📚 이달의 추천 도서 🔍\nLEAN AI"
+            android:textColor="#FF8A2E3B"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BookList"
+                android:textColor="#FF333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="›"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- 이 안에 도서가 2권씩 한 줄로 코드에서 추가됨 -->
+        <LinearLayout
+            android:id="@+id/bookContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

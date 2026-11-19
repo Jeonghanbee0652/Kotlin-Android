@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 메뉴 목록 화면의 본문 (환영 문구 + 배너 + 카테고리 6개) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="#FFFFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textColor="#FFE0505A"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BookMarket"
+                    android:textColor="#FFEE8A3A"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🧑‍💻"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_round"
+            android:backgroundTint="#FFCFE8E0"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="4dp"
+            android:padding="16dp"
+            android:text="Find out the best books to read\nwhen you do not even know what to read!\n\n📚🍎✏️📚"
+            android:textColor="#FF2B5D59"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Categories"
+                android:textColor="#FF333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="›"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tileBookList"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round"
+                android:backgroundTint="#FF3A9E9A"
+                android:gravity="center"
+                android:text="📖\n도서목록"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tileEbook"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round"
+                android:backgroundTint="#FF3B7DC4"
+                android:gravity="center"
+                android:text="📱\nE-Book"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tileCustomer"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round"
+                android:backgroundTint="#FFA65C9E"
+                android:gravity="center"
+                android:text="🎧\n고객센터"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tileMyPage"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round"
+                android:backgroundTint="#FF7E62B5"
+                android:gravity="center"
+                android:text="👤\n나의페이지"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tileMarket"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round"
+                android:backgroundTint="#FFE0505A"
+                android:gravity="center"
+                android:text="🏪\n마켓정보"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tileMemo"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round"
+                android:backgroundTint="#FFF0943A"
+                android:gravity="center"
+                android:text="📝\n메모장"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
