@@ -1,11 +1,13 @@
 package com.example.bookmarket
 
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -15,8 +17,20 @@ class BookListActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_book_list)
         applyEdgeInsets()
+        setupToolbar("도서목록", true)
 
         showBooks()
+    }
+
+    // 옵션 메뉴 만들기
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_book, menu)
+        return true
+    }
+
+    // 옵션 메뉴 항목 선택
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return handleBookMenu(item)
     }
 
     // 도서를 2권씩 한 줄로 배치
@@ -62,7 +76,10 @@ class BookListActivity : AppCompatActivity() {
         return item
     }
 
+    // 도서를 클릭하면 도서 상세 정보 화면으로 이동 (도서 ID 전달)
     private fun onBookClick(book: Book) {
-        Toast.makeText(this, "${book.title} 도서를 선택했습니다", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, BookDetailActivity::class.java)
+        intent.putExtra("bookId", book.id)
+        startActivity(intent)
     }
 }

@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+<!-- 메뉴 목록 화면 : 툴 바 + 내비게이션 메뉴(서랍) -->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/teal"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <include layout="@layout/menu_content" />
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal"
+        android:orientation="vertical">
 
-    <include layout="@layout/bottom_nav" />
-</LinearLayout>
+        <include layout="@layout/app_toolbar" />
+
+        <include layout="@layout/menu_content" />
+
+        <include layout="@layout/bottom_nav" />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

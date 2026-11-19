@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 도서목록 / 도서상세 화면의 액션 바 메뉴 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- 액션 아이템 : 앱 바에 아이콘으로 항상 표시 -->
+    <item
+        android:id="@+id/menuSearch"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="검색"
+        app:showAsAction="always" />
+    <!-- 옵션 메뉴 : ⋮ 를 누르면 나오는 항목 -->
+    <item
+        android:id="@+id/menuHome"
+        android:title="홈으로"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuVideo"
+        android:title="동영상강좌"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuCustomer"
+        android:title="고객센터"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuMyPage"
+        android:title="마이페이지"
+        app:showAsAction="never" />
+</menu>

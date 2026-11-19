@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".MenuActivity" />
         <activity android:name=".BookListActivity" />
+        <activity android:name=".BookDetailActivity" />
     </application>
 
 </manifest>
